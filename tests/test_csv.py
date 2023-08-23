@@ -5,7 +5,7 @@ from conftest import RESOURCES_DIR
 
 
 def test_csv():
-    with open(os.path.join(RESOURCES_DIR, "new_csv.csv"), 'w') as csv_file:
+    with open(os.path.join(RESOURCES_DIR, "new_csv.csv"), 'w', newline='') as csv_file:
         csvwriter = csv.writer(csv_file, delimiter=';')
         csvwriter.writerow(['Bonny', 'Born', 'Peter'])
         csvwriter.writerow(['Alex', 'Serj', 'Yana'])
