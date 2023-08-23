@@ -2,9 +2,7 @@ import zipfile
 import os
 from conftest import RESOURCES_DIR
 
-files_to_zip = ['docs-pytest-org-en-latest.pdf',
-                'file_example_XLS_10.xls',
-                'file_example_XLSX_50.xlsx']
+files_to_zip = os.listdir(RESOURCES_DIR)
 
 
 def test_zip_file():
